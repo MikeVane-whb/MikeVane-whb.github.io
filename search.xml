@@ -88,6 +88,89 @@
     </entry>
     
     
+    
+    <entry>
+      <title>eNSP常用命令</title>
+      <link href="/2021/11/16/categories/ensp-chang-yong-ming-ling/"/>
+      <url>/2021/11/16/categories/ensp-chang-yong-ming-ling/</url>
+      
+        <content type="html"><![CDATA[<h2 id="各种视窗"><a href="#各种视窗" class="headerlink" title="各种视窗"></a>各种视窗</h2><h3 id="用户视窗"><a href="#用户视窗" class="headerlink" title="用户视窗"></a>用户视窗</h3><ul><li>刚进入交换机时的界面</li></ul><blockquote><p>交换机名字外面为“&lt; &gt;”</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/e41ddc4ebd04925cd0488fbfe159db3e.png" alt="img"></p><h3 id="系统视窗"><a href="#系统视窗" class="headerlink" title="系统视窗"></a>系统视窗</h3><blockquote><p>交换机名字外面为“[ ]”<br>命令：system-view</p></blockquote><p><img src="https://img-blog.csdnimg.cn/5d972b045dee4e28bc2989e50ab087ed.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><h3 id="接口视窗"><a href="#接口视窗" class="headerlink" title="接口视窗"></a>接口视窗</h3><blockquote><p>交换机+接口名称<br>命令：interface+接口</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/97ef4ab921b2c6df895781c694660828.png" alt="img"></p><h3 id="Loopback-接口视图"><a href="#Loopback-接口视图" class="headerlink" title="Loopback 接口视图"></a>Loopback 接口视图</h3><blockquote><p>设备名-Loopback</p></blockquote><p><img src="https://img-blog.csdnimg.cn/f72a469c6cb1405fa2a85e942e0b7454.png#pic_center" alt="在这里插入图片描述"></p><h3 id="用户界面视图"><a href="#用户界面视图" class="headerlink" title="用户界面视图"></a>用户界面视图</h3><p><img src="https://img-blog.csdnimg.cn/22a2caebc1ec42f98b39407cb2d73b2e.png#pic_center" alt="在这里插入图片描述"></p><h3 id="RIP-协议视图"><a href="#RIP-协议视图" class="headerlink" title="RIP 协议视图"></a>RIP 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/d5d8a7c1f116453a96e7755a477035e5.png#pic_center" alt="在这里插入图片描述"></p><h3 id="OSPF-协议视图"><a href="#OSPF-协议视图" class="headerlink" title="OSPF 协议视图"></a>OSPF 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/3ddde2bd81bd475483871b99ae70a806.png#pic_center" alt="在这里插入图片描述"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>eNSP常见视窗</title>
+      <link href="/2021/11/16/categories/ensp-chang-jian-shi-chuang/"/>
+      <url>/2021/11/16/categories/ensp-chang-jian-shi-chuang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="各种视窗"><a href="#各种视窗" class="headerlink" title="各种视窗"></a>各种视窗</h2><h3 id="用户视窗"><a href="#用户视窗" class="headerlink" title="用户视窗"></a>用户视窗</h3><ul><li>刚进入交换机时的界面</li></ul><blockquote><p>交换机名字外面为“&lt; &gt;”</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/e41ddc4ebd04925cd0488fbfe159db3e.png" alt="img"></p><h3 id="系统视窗"><a href="#系统视窗" class="headerlink" title="系统视窗"></a>系统视窗</h3><blockquote><p>交换机名字外面为“[ ]”<br>命令：system-view</p></blockquote><p><img src="https://img-blog.csdnimg.cn/5d972b045dee4e28bc2989e50ab087ed.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><h3 id="接口视窗"><a href="#接口视窗" class="headerlink" title="接口视窗"></a>接口视窗</h3><blockquote><p>交换机+接口名称<br>命令：interface+接口</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/97ef4ab921b2c6df895781c694660828.png" alt="img"></p><h3 id="Loopback-接口视图"><a href="#Loopback-接口视图" class="headerlink" title="Loopback 接口视图"></a>Loopback 接口视图</h3><blockquote><p>设备名-Loopback</p></blockquote><p><img src="https://img-blog.csdnimg.cn/f72a469c6cb1405fa2a85e942e0b7454.png#pic_center" alt="在这里插入图片描述"></p><h3 id="用户界面视图"><a href="#用户界面视图" class="headerlink" title="用户界面视图"></a>用户界面视图</h3><p><img src="https://img-blog.csdnimg.cn/22a2caebc1ec42f98b39407cb2d73b2e.png#pic_center" alt="在这里插入图片描述"></p><h3 id="RIP-协议视图"><a href="#RIP-协议视图" class="headerlink" title="RIP 协议视图"></a>RIP 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/d5d8a7c1f116453a96e7755a477035e5.png#pic_center" alt="在这里插入图片描述"></p><h3 id="OSPF-协议视图"><a href="#OSPF-协议视图" class="headerlink" title="OSPF 协议视图"></a>OSPF 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/3ddde2bd81bd475483871b99ae70a806.png#pic_center" alt="在这里插入图片描述"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> 交换机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>交换机三种端口模式的特点</title>
+      <link href="/2021/11/16/categories/jiao-huan-ji-san-chong-duan-kou-mo-shi-de-te-dian/"/>
+      <url>/2021/11/16/categories/jiao-huan-ji-san-chong-duan-kou-mo-shi-de-te-dian/</url>
+      
+        <content type="html"><![CDATA[<h2 id="交换机三种端口模式的特点"><a href="#交换机三种端口模式的特点" class="headerlink" title="交换机三种端口模式的特点"></a>交换机三种端口模式的特点</h2><table><thead><tr><th>接口</th><th>属于多端口</th><th>(通常)连接设备</th><th>PVID</th><th>接受</th><th>发送</th></tr></thead><tbody><tr><td>Access</td><td>❌</td><td>计算机</td><td>PVID &#x3D; VLAN ID</td><td>一般接受<strong>untagged</strong>数据帧，部分产品接受<strong>tagged</strong>数据帧 • 当接收<strong>untagged</strong>数据帧时，根据端口<strong>PVID</strong>值为数据帧加上tag和缺省优先级，再进 行交换转发； • 当收到<strong>tagged</strong>数据帧时，不同厂家设备可能处理不一样的！（忽略此特殊情况）</td><td><strong>去除标签并进行转发:</strong> • 对于数据帧中的<strong>VID</strong>与端口<strong>PVID</strong>一致的，去除标签并进行转发！ • 对于数据帧中的VID与端口PVID不一致的，不进行转发！</td></tr><tr><td>Trunk</td><td>✔</td><td>交换机之间或交换机与路由器</td><td>默认为1</td><td>• 能够接收<strong>VID&#x3D;PVID</strong>和<strong>VID≠PVID</strong>的<strong>tagged frame</strong>，不改变Tag； • 对于<strong>untagged frame</strong>则加上端口的<strong>PVID</strong>和<strong>default priority</strong>再进行交换转发；</td><td>• 对于VID&#x3D;PVID的<strong>Tag</strong>包则去掉<strong>VID Tag</strong>再进行转发。 • 对于<strong>VID ≠ PVID</strong>的<strong>Tag</strong>包则转发不修改<strong>Tag</strong>。 • 对于<strong>Untagged</strong>包则无此情况。</td></tr><tr><td>Hybrid</td><td>✔</td><td>Access + Trunk</td><td>默认为1</td><td>• 能够接收<strong>VID&#x3D;PVID</strong>和<strong>VID≠PVID</strong>的<strong>tagged frame</strong>，不改变TAG； • 对于<strong>untagged frame</strong>则加上端口的<strong>PVID</strong>和<strong>default priority</strong>再进行交换转发；</td><td>• 判断该VLAN在本端口的属性（即查看到该端口对哪些VLAN是<strong>untagged</strong>， 哪些 VLAN是 <strong>tag</strong>）。 • 如果要求输出为<strong>untagged</strong>包则在输出端口剥离VLAN信息，再发送；如果是要求输出 <strong>tag</strong>，则直接发送。</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> 交换机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
