@@ -90,6 +90,35 @@
     
     
     <entry>
+      <title>路由基础-分析路由表以及关于路由选路的问题</title>
+      <link href="/2021/12/02/categories/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/"/>
+      <url>/2021/12/02/categories/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h2 id="路由表解析"><a href="#路由表解析" class="headerlink" title="路由表解析"></a>路由表解析</h2><ul><li><blockquote><p>命令：display ip routing-table</p></blockquote></li></ul><p><img src="https://img-blog.csdnimg.cn/422fa1c843334c399a0c7b8551e606cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p><table><thead><tr><th>路由表字段</th><th>含义</th></tr></thead><tbody><tr><td>Destination</td><td>目标地址，用来标识IP包的<strong>目标地址或者目标网络</strong></td></tr><tr><td>Mask</td><td>网络前缀（或掩码），选择<strong>最佳路由</strong>的重要评断依据（最长匹配原则）</td></tr><tr><td>NextHop</td><td>下一跳地址，指明IP包所经由的<strong>下一个路由器的接口地址</strong></td></tr><tr><td>Interface</td><td>出接口，指明IP包将从该路由器的哪个接口转发出去</td></tr><tr><td>Protocol</td><td>协议，路由的来源，学习方式</td></tr><tr><td>Preference</td><td>优先级，比较<strong>不同路由来源</strong>到达相同目标网络的优先级，越低越优先</td></tr><tr><td>Cost</td><td>度量值，比较<strong>相同路由来源</strong>到达相同目标网络的不同路径的优先级，越低越优先</td></tr></tbody></table><h3 id="常用路由类型的默认优先级"><a href="#常用路由类型的默认优先级" class="headerlink" title="常用路由类型的默认优先级"></a>常用路由类型的默认<a href="https://so.csdn.net/so/search?q=%E4%BC%98%E5%85%88%E7%BA%A7&spm=1001.2101.3001.7020">优先级</a></h3><table><thead><tr><th>路由类型</th><th>优先级</th></tr></thead><tbody><tr><td>Direct</td><td>0</td></tr><tr><td>OSPF</td><td>10</td></tr><tr><td>Static</td><td>60</td></tr><tr><td>RIP</td><td>100</td></tr></tbody></table><h2 id="路由选路"><a href="#路由选路" class="headerlink" title="路由选路"></a>路由选路</h2><p><img src="https://img-blog.csdnimg.cn/88f33d2ac599472fa4aca505f0dc00d2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="网络拓扑"></p><ul><li>如果AR4要给AR7转发数据包，它会怎么选路呢？</li><li>假设路由协议选择不同（OSPF，RIP…）<ul><li>上述问题属于<strong>不同路由来源到达相同目标网络</strong>，所以比较优先级</li><li>所以路由器选择优先级较低的那条路进行转发数据包</li></ul></li><li>假设所有路由协议选择相同<ul><li>上述问题属于<strong>相同路由来源到达相同目标网络</strong>，所以比较Cost</li><li>根据Cost越小，越优先</li><li>所以路由器选择Cost较低的那条路进行转发数据包</li></ul></li></ul><h3 id="路由表的工作内容"><a href="#路由表的工作内容" class="headerlink" title="路由表的工作内容"></a>路由表的工作内容</h3><ul><li>收到数据包查看<strong>目标IP地址</strong></li><li>在路由表中选择<strong>最佳路径</strong></li><li><strong>维护</strong>路由表</li><li>注意：路由表所显示的信息已经是<strong>比较优先级</strong>之后的结果</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> 路由 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>eNSP常用命令</title>
       <link href="/2021/11/16/categories/ensp-chang-yong-ming-ling/"/>
       <url>/2021/11/16/categories/ensp-chang-yong-ming-ling/</url>
@@ -119,7 +148,7 @@
       <link href="/2021/11/16/categories/ensp-chang-jian-shi-chuang/"/>
       <url>/2021/11/16/categories/ensp-chang-jian-shi-chuang/</url>
       
-        <content type="html"><![CDATA[<h2 id="各种视窗"><a href="#各种视窗" class="headerlink" title="各种视窗"></a>各种视窗</h2><h3 id="用户视窗"><a href="#用户视窗" class="headerlink" title="用户视窗"></a>用户视窗</h3><ul><li>刚进入交换机时的界面</li></ul><blockquote><p>交换机名字外面为“&lt; &gt;”</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/e41ddc4ebd04925cd0488fbfe159db3e.png" alt="img"></p><h3 id="系统视窗"><a href="#系统视窗" class="headerlink" title="系统视窗"></a>系统视窗</h3><blockquote><p>交换机名字外面为“[ ]”<br>命令：system-view</p></blockquote><p><img src="https://img-blog.csdnimg.cn/5d972b045dee4e28bc2989e50ab087ed.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><h3 id="接口视窗"><a href="#接口视窗" class="headerlink" title="接口视窗"></a>接口视窗</h3><blockquote><p>交换机+接口名称<br>命令：interface+接口</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/97ef4ab921b2c6df895781c694660828.png" alt="img"></p><h3 id="Loopback-接口视图"><a href="#Loopback-接口视图" class="headerlink" title="Loopback 接口视图"></a>Loopback 接口视图</h3><blockquote><p>设备名-Loopback</p></blockquote><p><img src="https://img-blog.csdnimg.cn/f72a469c6cb1405fa2a85e942e0b7454.png#pic_center" alt="在这里插入图片描述"></p><h3 id="用户界面视图"><a href="#用户界面视图" class="headerlink" title="用户界面视图"></a>用户界面视图</h3><p><img src="https://img-blog.csdnimg.cn/22a2caebc1ec42f98b39407cb2d73b2e.png#pic_center" alt="在这里插入图片描述"></p><h3 id="RIP-协议视图"><a href="#RIP-协议视图" class="headerlink" title="RIP 协议视图"></a>RIP 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/d5d8a7c1f116453a96e7755a477035e5.png#pic_center" alt="在这里插入图片描述"></p><h3 id="OSPF-协议视图"><a href="#OSPF-协议视图" class="headerlink" title="OSPF 协议视图"></a>OSPF 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/3ddde2bd81bd475483871b99ae70a806.png#pic_center" alt="在这里插入图片描述"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="各种视窗"><a href="#各种视窗" class="headerlink" title="各种视窗"></a>各种视窗</h2><h3 id="用户视窗"><a href="#用户视窗" class="headerlink" title="用户视窗"></a>用户视窗</h3><ul><li>刚进入交换机时的界面</li></ul><blockquote><p>交换机名字外面为“&lt; &gt;”</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/e41ddc4ebd04925cd0488fbfe159db3e.png" alt="用户视窗"></p><h3 id="系统视窗"><a href="#系统视窗" class="headerlink" title="系统视窗"></a>系统视窗</h3><blockquote><p>交换机名字外面为“[ ]”<br>命令：system-view</p></blockquote><p><img src="https://img-blog.csdnimg.cn/5d972b045dee4e28bc2989e50ab087ed.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="系统视窗"></p><h3 id="接口视窗"><a href="#接口视窗" class="headerlink" title="接口视窗"></a>接口视窗</h3><blockquote><p>交换机+接口名称<br>命令：interface+接口</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/97ef4ab921b2c6df895781c694660828.png" alt="接口视窗"></p><h3 id="Loopback-接口视图"><a href="#Loopback-接口视图" class="headerlink" title="Loopback 接口视图"></a>Loopback 接口视图</h3><blockquote><p>设备名-Loopback</p></blockquote><p><img src="https://img-blog.csdnimg.cn/f72a469c6cb1405fa2a85e942e0b7454.png#pic_center" alt="接口视图"></p><h3 id="用户界面视图"><a href="#用户界面视图" class="headerlink" title="用户界面视图"></a>用户界面视图</h3><p><img src="https://img-blog.csdnimg.cn/22a2caebc1ec42f98b39407cb2d73b2e.png#pic_center" alt="用户界面视图"></p><h3 id="RIP-协议视图"><a href="#RIP-协议视图" class="headerlink" title="RIP 协议视图"></a>RIP 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/d5d8a7c1f116453a96e7755a477035e5.png#pic_center" alt="RIP视图"></p><h3 id="OSPF-协议视图"><a href="#OSPF-协议视图" class="headerlink" title="OSPF 协议视图"></a>OSPF 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/3ddde2bd81bd475483871b99ae70a806.png#pic_center" alt="OSPF视图"></p>]]></content>
       
       
       <categories>
