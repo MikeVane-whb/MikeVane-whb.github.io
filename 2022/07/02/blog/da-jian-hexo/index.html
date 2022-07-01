@@ -4,28 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="路由基础-分析路由表以及关于路由选路的问题, MikeVane">
-    <meta name="description" content="路由表解析
+    <meta name="keywords" content="eNSP常用命令, MikeVane">
+    <meta name="description" content="1.设置域名后重新部署项目后出现404
+需要在博客的根目录下的source文件中加入CNAME文件
+然后在CNAME里面写入自己的域名
+接着打开根目录的.config_yml文件，找到skip_render，在后面加上CNAME
 
-命令：display ip routing-table
-
-
-
-
-
-
-
-路由表字段
-含义
-
-
-
-Destination
-目标地址，用来标识IP包的目标地址或者目标网络
-
-
-Mask
-网络前缀（或掩码），选择最佳路由的重要评断依据">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -39,7 +24,7 @@ Mask
 
     
 
-    <title>路由基础-分析路由表以及关于路由选路的问题 | MikeVane</title>
+    <title>eNSP常用命令 | MikeVane</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -329,12 +314,12 @@ Mask
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">路由基础-分析路由表以及关于路由选路的问题</h1>
+                    <h1 class="description center-align post-title">eNSP常用命令</h1>
                 </div>
             </div>
         </div>
@@ -450,12 +435,8 @@ Mask
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ensp/">
-                                <span class="chip bg-color">ensp</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%B7%AF%E7%94%B1/">
-                                <span class="chip bg-color">路由</span>
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
                     </div>
@@ -466,12 +447,8 @@ Mask
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/ensp/" class="post-category">
-                                ensp
-                            </a>
-                        
-                            <a href="/categories/ensp/%E7%BD%91%E7%BB%9C/" class="post-category">
-                                网络
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
                             </a>
                         
                     </div>
@@ -483,7 +460,7 @@ Mask
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-02
+                    2022-07-02
                 </div>
                 
 
@@ -507,93 +484,10 @@ Mask
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="路由表解析"><a href="#路由表解析" class="headerlink" title="路由表解析"></a>路由表解析</h2><ul>
-<li><blockquote>
-<p>命令：display ip routing-table</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/422fa1c843334c399a0c7b8551e606cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p>
-<table>
-<thead>
-<tr>
-<th>路由表字段</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Destination</td>
-<td>目标地址，用来标识IP包的<strong>目标地址或者目标网络</strong></td>
-</tr>
-<tr>
-<td>Mask</td>
-<td>网络前缀（或掩码），选择<strong>最佳路由</strong>的重要评断依据（最长匹配原则）</td>
-</tr>
-<tr>
-<td>NextHop</td>
-<td>下一跳地址，指明IP包所经由的<strong>下一个路由器的接口地址</strong></td>
-</tr>
-<tr>
-<td>Interface</td>
-<td>出接口，指明IP包将从该路由器的哪个接口转发出去</td>
-</tr>
-<tr>
-<td>Protocol</td>
-<td>协议，路由的来源，学习方式</td>
-</tr>
-<tr>
-<td>Preference</td>
-<td>优先级，比较<strong>不同路由来源</strong>到达相同目标网络的优先级，越低越优先</td>
-</tr>
-<tr>
-<td>Cost</td>
-<td>度量值，比较<strong>相同路由来源</strong>到达相同目标网络的不同路径的优先级，越低越优先</td>
-</tr>
-</tbody></table>
-<h3 id="常用路由类型的默认优先级"><a href="#常用路由类型的默认优先级" class="headerlink" title="常用路由类型的默认优先级"></a>常用路由类型的默认<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E4%BC%98%E5%85%88%E7%BA%A7&spm=1001.2101.3001.7020">优先级</a></h3><table>
-<thead>
-<tr>
-<th>路由类型</th>
-<th>优先级</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Direct</td>
-<td>0</td>
-</tr>
-<tr>
-<td>OSPF</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Static</td>
-<td>60</td>
-</tr>
-<tr>
-<td>RIP</td>
-<td>100</td>
-</tr>
-</tbody></table>
-<h2 id="路由选路"><a href="#路由选路" class="headerlink" title="路由选路"></a>路由选路</h2><p><img src="https://img-blog.csdnimg.cn/88f33d2ac599472fa4aca505f0dc00d2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="网络拓扑"></p>
-<ul>
-<li>如果AR4要给AR7转发数据包，它会怎么选路呢？</li>
-<li>假设路由协议选择不同（OSPF，RIP…）<ul>
-<li>上述问题属于<strong>不同路由来源到达相同目标网络</strong>，所以比较优先级</li>
-<li>所以路由器选择优先级较低的那条路进行转发数据包</li>
-</ul>
-</li>
-<li>假设所有路由协议选择相同<ul>
-<li>上述问题属于<strong>相同路由来源到达相同目标网络</strong>，所以比较Cost</li>
-<li>根据Cost越小，越优先</li>
-<li>所以路由器选择Cost较低的那条路进行转发数据包</li>
-</ul>
-</li>
-</ul>
-<h3 id="路由表的工作内容"><a href="#路由表的工作内容" class="headerlink" title="路由表的工作内容"></a>路由表的工作内容</h3><ul>
-<li>收到数据包查看<strong>目标IP地址</strong></li>
-<li>在路由表中选择<strong>最佳路径</strong></li>
-<li><strong>维护</strong>路由表</li>
-<li>注意：路由表所显示的信息已经是<strong>比较优先级</strong>之后的结果</li>
+                <h2 id="1-设置域名后重新部署项目后出现404"><a href="#1-设置域名后重新部署项目后出现404" class="headerlink" title="1.设置域名后重新部署项目后出现404"></a>1.设置域名后重新部署项目后出现404</h2><ul>
+<li>需要在博客的根目录下的source文件中加入CNAME文件</li>
+<li>然后在CNAME里面写入自己的域名</li>
+<li>接着打开根目录的.config_yml文件，找到skip_render，在后面加上CNAME</li>
 </ul>
 
                 
@@ -621,7 +515,7 @@ Mask
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://mikevane-whb.github.io/2021/12/02/categories/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/">https://mikevane-whb.github.io/2021/12/02/categories/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/</a>
+                    <a href="https://mikevane-whb.github.io/2022/07/02/blog/da-jian-hexo/">https://mikevane-whb.github.io/2022/07/02/blog/da-jian-hexo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -659,12 +553,8 @@ Mask
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ensp/">
-                                    <span class="chip bg-color">ensp</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%B7%AF%E7%94%B1/">
-                                    <span class="chip bg-color">路由</span>
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
                         </div>
@@ -838,64 +728,12 @@ Mask
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2022/06/30/java/java-xue-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Java学习">
-                        
-                        <span class="card-title">Java学习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-30
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/11/16/categories/ensp-chang-yong-ming-ling/">
+                <a href="/2022/07/02/blog/da-jian-hexo/">
                     <div class="card-image">
                         
                         
@@ -912,14 +750,64 @@ Mask
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ensp/" class="post-category">
-                                    ensp
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/06/30/java/wang-luo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="网络学习">
+                        
+                        <span class="card-title">网络学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    网络
                                 </a>
                             
                             
@@ -929,8 +817,12 @@ Mask
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ensp/">
-                        <span class="chip bg-color">ensp</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">网络</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">基础</span>
                     </a>
                     
                 </div>
