@@ -4,24 +4,11 @@
   
     
     <entry>
-      <title>hello</title>
-      <link href="/2022/07/02/hello/"/>
-      <url>/2022/07/02/hello/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/./hello/image-20220702021854360.png" alt="1"></p><blockquote><p>123123</p></blockquote>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>根据hexo+Github搭建自己博客</title>
       <link href="/2022/07/02/blog/da-jian-hexo/"/>
       <url>/2022/07/02/blog/da-jian-hexo/</url>
       
-        <content type="html"><![CDATA[<h2 id="博客搭建步骤"><a href="#博客搭建步骤" class="headerlink" title="博客搭建步骤"></a>博客搭建步骤</h2><ul><li>123</li></ul><h3 id="绑定github-io域名到自己的域名"><a href="#绑定github-io域名到自己的域名" class="headerlink" title="绑定github.io域名到自己的域名"></a>绑定github.io域名到自己的域名</h3><ul><li>首先申请自己的域名(网上有很多教程)，我这里用的腾讯提供的域名提供商购买的域名</li><li>首先进入到域名解析界面，然后按照如下操作进行</li><li><img src="/./%E6%90%AD%E5%BB%BAhexo/image-20220702021854360.png" alt="设置域名"></li><li>服务器ip地址可以通过ping获得<ul><li>进入cmd，输入ping 你自己的网站地址</li><li><img src="/img/%E6%90%AD%E5%BB%BAhexo/image-20220702021854360.png" alt="image-20220702025459396"></li></ul></li></ul><h3 id="设置域名后重新部署项目后出现404"><a href="#设置域名后重新部署项目后出现404" class="headerlink" title="设置域名后重新部署项目后出现404"></a>设置域名后重新部署项目后出现404</h3><ul><li><p>需要在博客的根目录下的source文件中加入CNAME文件</p></li><li><p>然后在CNAME里面写入自己的域名</p></li><li><blockquote><p><code>非常重要</code>：接着打开根目录的.config_yml文件，找到skip_render，在后面加上CNAME</p></blockquote></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="博客搭建步骤"><a href="#博客搭建步骤" class="headerlink" title="博客搭建步骤"></a>博客搭建步骤</h2><h3 id="绑定github-io域名到自己的域名"><a href="#绑定github-io域名到自己的域名" class="headerlink" title="绑定github.io域名到自己的域名"></a>绑定github.io域名到自己的域名</h3><ul><li>首先申请自己的域名(网上有很多教程)，我这里用的腾讯提供的域名提供商购买的域名</li><li>首先进入到域名解析界面，然后按照如下操作进行<ul><li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021342883.png" alt="image-20220702021854360"></li></ul></li><li>服务器ip地址可以通过ping获得<ul><li>进入cmd，输入ping 你自己的网站地址<ul><li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021342647.png" alt="image-20220702025459396"></li></ul></li></ul></li></ul><h3 id="设置域名后重新部署项目后出现404"><a href="#设置域名后重新部署项目后出现404" class="headerlink" title="设置域名后重新部署项目后出现404"></a>设置域名后重新部署项目后出现404</h3><ul><li><p>需要在博客的根目录下的source文件中加入CNAME文件</p></li><li><p>然后在CNAME里面写入自己的域名</p></li><li><blockquote><p><code>非常重要</code>：接着打开根目录的.config_yml文件，找到skip_render，在后面加上CNAME</p></blockquote></li></ul>]]></content>
       
       
       <categories>
