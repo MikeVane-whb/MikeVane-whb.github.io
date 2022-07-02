@@ -29,33 +29,6 @@
     
     
     <entry>
-      <title>Java学习</title>
-      <link href="/2022/06/30/java/java-xue-xi/"/>
-      <url>/2022/06/30/java/java-xue-xi/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul><li><pre><code class="line-numbers language-java">  public static void main(String[] args)&#123;      System.out.println(&quot;hello world&quot;)  &#125;</code></pre></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> 基础 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>网络学习</title>
       <link href="/2022/06/30/java/wang-luo/"/>
       <url>/2022/06/30/java/wang-luo/</url>
@@ -72,9 +45,36 @@
       
         <tags>
             
+            <tag> 网络 </tag>
+            
             <tag> 基础 </tag>
             
-            <tag> 网络 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java学习</title>
+      <link href="/2022/06/30/java/java-xue-xi/"/>
+      <url>/2022/06/30/java/java-xue-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul><li><pre><code class="line-numbers language-java">  public static void main(String[] args)&#123;      System.out.println(&quot;hello world&quot;)  &#125;</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
