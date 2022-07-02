@@ -100,6 +100,7 @@ $(function () {
                 this.insertAdjacentElement('afterend', captionDiv)
             }
         });
+        
         // $('#articleContent, #myGallery').lightGallery({
         //     selector: '.img-item',
         //     // 启用字幕
