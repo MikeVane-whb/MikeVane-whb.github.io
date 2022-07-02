@@ -489,12 +489,12 @@
                 <h2 id="博客搭建步骤"><a href="#博客搭建步骤" class="headerlink" title="博客搭建步骤"></a>博客搭建步骤</h2><h3 id="绑定github-io域名到自己的域名"><a href="#绑定github-io域名到自己的域名" class="headerlink" title="绑定github.io域名到自己的域名"></a>绑定github.io域名到自己的域名</h3><ul>
 <li>首先申请自己的域名(网上有很多教程)，我这里用的腾讯提供的域名提供商购买的域名</li>
 <li>首先进入到域名解析界面，然后按照如下操作进行<ul>
-<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021342883.png" alt="image-20220702021854360"></li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021342883.png" alt="绑定域名"></li>
 </ul>
 </li>
 <li>服务器ip地址可以通过ping获得<ul>
 <li>进入cmd，输入ping 你自己的网站地址<ul>
-<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021342647.png" alt="image-20220702025459396"></li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021342647.png" alt="获取服务器地址"></li>
 </ul>
 </li>
 </ul>
@@ -508,6 +508,66 @@
 <li><blockquote>
 <p><code>非常重要</code>：接着打开根目录的.config_yml文件，找到skip_render，在后面加上CNAME</p>
 </blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="通过阿里云OSS加速图片加载速度"><a href="#通过阿里云OSS加速图片加载速度" class="headerlink" title="通过阿里云OSS加速图片加载速度"></a>通过阿里云OSS加速图片加载速度</h3><ul>
+<li><p>因为很多时候，网站无法显示是因为图片获取速度太慢的原因，所以既为了使用<strong>typora</strong>更方便的记笔记（利用<strong>阿里云OSS</strong>可以直接把图片托管到云端），也为了更快的访问，所以使用了付费的阿里云OSS</p>
+</li>
+<li><p><code>步骤</code>：</p>
+<ol>
+<li><p>首先下载typora与picgo（网上有教程，这里重点不在这）</p>
+</li>
+<li><p>阿里云官网购买OSS</p>
+<ul>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021504614.png" alt="购买OSS"></li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021505621.png" alt="购买OSS"></li>
+</ul>
+</li>
+<li><p>设置OSS</p>
+<ul>
+<li><p>进入到控制台，点击对象存储OSS</p>
+</li>
+<li><p><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021506162.png" alt="设置OSS"></p>
+</li>
+<li><p><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021507881.png" alt="设置OSS"></p>
+</li>
+<li><p><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021507331.png" alt="设置OSS"></p>
+<ul>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021510564.png" alt="设置Bucket"></li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021511073.png" alt="设置Bucket"></li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021512220.png" alt="设置Bucket"></li>
+<li>点击你的Bucket名称，进入到下面这个页面</li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021513798.png" alt="设置Bucket"></li>
+</ul>
+</li>
+<li><p>进入到刚才新建的目录，点击 <strong>上传文件</strong> 选择你想上传的文件即可</p>
+</li>
+</ul>
+</li>
+<li><p>使用 <strong>picgo+typora</strong> 上传（不使用的可跳过）</p>
+<ul>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021517785.png" alt="获取key"></li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021517158.png" alt="获取key"></li>
+<li>选择创建<strong>AccessKey</strong>，创建成功之后记住key</li>
+<li>进入到 <strong>picgo</strong> 中</li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021521728.png" alt="设置key"></li>
+<li>进入到 <strong>typora</strong> 中，点击文件-&gt;偏好设置-&gt;图像</li>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021525688.png" alt="设置typora"></li>
+<li>这样在把图片复制到typora后，typora会自动上传图片到你设置的目录中，并且picgo会自动将你图片对应的URL复制到你的粘贴板，你可以直接使用</li>
+</ul>
+</li>
+<li><p>将博客的图片迁移到OSS中</p>
+<ul>
+<li>进入到本地博客根目录-&gt;themes-&gt;你的主题名-&gt;source</li>
+<li>将里面的图片全部上传到OSS中</li>
+<li>有些博客会使用yml文件进行配置图片地址，所以需要将里面配置的路径设置为你图片所对应的路径<ul>
+<li><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/page/202207021534893.png" alt="设置路径"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 </li>
 </ul>
 
