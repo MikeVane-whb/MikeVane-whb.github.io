@@ -29,36 +29,9 @@
     
     
     <entry>
-      <title>网络学习</title>
-      <link href="/2022/06/30/java/wang-luo/"/>
-      <url>/2022/06/30/java/wang-luo/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>Http</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 网络 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网络 </tag>
-            
-            <tag> 基础 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java学习</title>
-      <link href="/2022/06/30/java/java-xue-xi/"/>
-      <url>/2022/06/30/java/java-xue-xi/</url>
+      <link href="/2022/06/30/categories/java/java-xue-xi/"/>
+      <url>/2022/06/30/categories/java/java-xue-xi/</url>
       
         <content type="html"><![CDATA[<h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul><li><pre><code class="line-numbers language-java">  public static void main(String[] args)&#123;      System.out.println(&quot;hello world&quot;)  &#125;</code></pre></li></ul>]]></content>
       
@@ -83,9 +56,144 @@
     
     
     <entry>
+      <title>网络学习</title>
+      <link href="/2022/06/30/categories/java/wang-luo/"/>
+      <url>/2022/06/30/categories/java/wang-luo/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Http</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【计算机网络】URL的基本格式以及常用URL</title>
+      <link href="/2022/02/09/categories/wang-luo/ji-suan-ji-wang-luo-url-de-ji-ben-ge-shi-yi-ji-chang-yong-url/"/>
+      <url>/2022/02/09/categories/wang-luo/ji-suan-ji-wang-luo-url-de-ji-ben-ge-shi-yi-ji-chang-yong-url/</url>
+      
+        <content type="html"><![CDATA[<ul><li>URL的基本格式：<strong>protocol:&#x2F;&#x2F;hostname&#x2F;path</strong></li></ul><table><thead><tr><th>协议</th><th>通用语法</th><th></th></tr></thead><tbody><tr><td>IP</td><td>&#x2F;&#x2F;<user>:<password>@<host>:<port>&#x2F;<url-path></td><td></td></tr><tr><td>FTP</td><td><cwd1>&#x2F;<cwd2>&#x2F;…&#x2F;<cwdN>&#x2F;<name>;type&#x3D;<typecode></td><td></td></tr><tr><td>HTTP</td><td>http:&#x2F;&#x2F;<host>:<port>&#x2F;<path>?<searchpart></td><td></td></tr><tr><td>Gopher</td><td>gopher:&#x2F;&#x2F;<host>:<port>&#x2F;<gopher-path></td><td></td></tr><tr><td>TELNET</td><td>telnet:&#x2F;&#x2F;<user>:<password>@<host>:<port>&#x2F;</td><td></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【计算机网络】电路交换与分组交换的区别</title>
+      <link href="/2022/01/17/categories/wang-luo/ji-suan-ji-wang-luo-dian-lu-jiao-huan-yu-fen-zu-jiao-huan-de-qu-bie/"/>
+      <url>/2022/01/17/categories/wang-luo/ji-suan-ji-wang-luo-dian-lu-jiao-huan-yu-fen-zu-jiao-huan-de-qu-bie/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h3 id="电路交换与分组交换的区别"><a href="#电路交换与分组交换的区别" class="headerlink" title="电路交换与分组交换的区别"></a>电路交换与分组交换的区别</h3><table><thead><tr><th></th><th>电路交换</th><th>分组交换</th></tr></thead><tbody><tr><td>数据传输过程</td><td>i) 连接建立。 ii) 数据传输。 iii) 连接释放</td><td>直接发生数据传输</td></tr><tr><td>地址</td><td>在电路交换中，每个数据单元都知道由源提供的<strong>整个</strong>路径地址</td><td>每个数据单元只知道最终目的地址<strong>中间</strong>路径，并且这个路径是由路由器决定的</td></tr><tr><td>数据处理</td><td>数据仅在源系统处理</td><td>数据在包括源系统在内的所有中间节点上进行处理</td></tr><tr><td>延迟</td><td>数据单元之间的延迟一致</td><td>数据单元之间的延迟不均匀</td></tr><tr><td>资源预留</td><td>资源预留，因为数据传输的路径是固定的</td><td>没有资源预留，因为带宽在用户之间共享</td></tr><tr><td>可靠性</td><td>更可靠</td><td>不太可靠</td></tr><tr><td>浪费程度</td><td>资源浪费较多</td><td>资源浪费更少</td></tr><tr><td>存储转发</td><td>没有存储和转发技术</td><td>存在存储和转发技术</td></tr><tr><td>数据传输是否由单一对象传出</td><td>数据的传输由源完成</td><td>数据的传输不仅由源完成，还由中间路由器完成</td></tr><tr><td>拥塞对应的阶段</td><td>在连接建立阶段可能会发生拥塞，因为可能存在对通道发出请求但通道已被占用的情况</td><td>数据传输阶段可能会发生拥塞，大量数据包很快就会到来</td></tr><tr><td>双向性</td><td>不便于处理双边流量</td><td>适用于处理双边流量</td></tr><tr><td>成本计算</td><td>费用取决于时间和距离，而不取决于网络中的流量</td><td>费用基于字节数和连接时间</td></tr><tr><td>分组记录</td><td>永远不可能记录分组</td><td>可以记录分组</td></tr><tr><td>物理连接</td><td>源和目标之间有一条物理路径</td><td>源和目标之间没有物理路径</td></tr></tbody></table></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>eNSP-构建静态路由实验</title>
+      <link href="/2021/12/02/categories/ensp/ensp-gou-jian-jing-tai-lu-you-shi-yan/"/>
+      <url>/2021/12/02/categories/ensp/ensp-gou-jian-jing-tai-lu-you-shi-yan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="构建静态路由"><a href="#构建静态路由" class="headerlink" title="构建静态路由"></a>构建静态路由</h2><ul><li>网络拓扑图如下：</li></ul><p><img src="https://img-blog.csdnimg.cn/d34456807d824fd5b3e6fb4ef549a829.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="网络拓扑"></p><h3 id="设置AR-1"><a href="#设置AR-1" class="headerlink" title="设置AR-1"></a>设置AR-1</h3><pre class="line-numbers language-none"><code class="language-none">sysundo info-cen ensys AR-1int g0&#x2F;0&#x2F;0ip addr 1.1.1.254 24quitint g0&#x2F;0&#x2F;1ip addr 3.1.1.1 24quitdis ip rout12345678910<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>查路由表可知设置成功<br>  <img src="https://img-blog.csdnimg.cn/4d5fdc5bcfe34f08b94c56cc69cf9ee0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></li></ul><h3 id="设置AR-2"><a href="#设置AR-2" class="headerlink" title="设置AR-2"></a>设置AR-2</h3><pre class="line-numbers language-none"><code class="language-none">sysundo info-cen ensys AR-2int g0&#x2F;0&#x2F;0ip addr 3.1.1.2 24quitint g0&#x2F;0&#x2F;1ip addr 2.2.2.254 24quitdis ip rout12345678910<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>查路由表可知设置成功</li></ul><p><img src="https://img-blog.csdnimg.cn/cf816ac905844434ad7451fdc4c50a18.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p><h3 id="设置AR-1与AR-2的静态路由"><a href="#设置AR-1与AR-2的静态路由" class="headerlink" title="设置AR-1与AR-2的静态路由"></a>设置AR-1与AR-2的静态路由</h3><ul><li>AR-1</li></ul><pre class="line-numbers language-none"><code class="language-none">ip route-sta 2.2.2.2 24 3.1.1.2dis ip rout12<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>检查路由表的下一跳与静态路由是否配置成功</li></ul><p><img src="https://img-blog.csdnimg.cn/0b1e71b27fd04a82862d6d2223414bfb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p><ul><li><p>设置成功</p></li><li><p>AR-2</p></li></ul><pre class="line-numbers language-none"><code class="language-none">ip route-sta 1.1.1.1 24 3.1.1.1dis ip rout12<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>检查路由表的下一跳与静态路由是否配置成功</li></ul><p><img src="https://img-blog.csdnimg.cn/ea4caf4099c04258bad8a351c80f7bd5.png#pic_center" alt="设置成功"></p><ul><li>设置成功</li></ul><h3 id="测试主机是否能ping通"><a href="#测试主机是否能ping通" class="headerlink" title="测试主机是否能ping通"></a>测试主机是否能ping通</h3><p><img src="https://img-blog.csdnimg.cn/6f1e8e9b7770481cb57016996f4a4ab4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="ping"></p><ul><li>测试能ping通，最开始的<strong>Request timeout</strong>是<strong>ARP</strong>导致的</li></ul><h4 id="测试ARP"><a href="#测试ARP" class="headerlink" title="测试ARP"></a>测试ARP</h4><ul><li>对AR-1的GE0&#x2F;0&#x2F;0进行抓包，清空主机的ARP缓存</li><li>重新测试通信</li></ul><img src="https://img-blog.csdnimg.cn/b045dfc24d6e445bbcc6bcdfb1f462e2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" style="zoom:150%;" /><ul><li>在存在ARP缓存的情况下继续通信，并继续抓包</li></ul><img src="https://img-blog.csdnimg.cn/331068b0981141929ad539dba8b9aa54.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述" style="zoom:150%;" /><ul><li>在没有ARP请求的情况下，主机通信没有出现超时</li><li>所以证得，(在网络设置正确的情况下) 主机通信出现超时的原因是因为ARP协议</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> 路由 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>路由基础-直连路由、静态路由与动态路由</title>
+      <link href="/2021/12/02/categories/ensp/lu-you-ji-chu-zhi-lian-lu-you-jing-tai-lu-you-yu-dong-tai-lu-you/"/>
+      <url>/2021/12/02/categories/ensp/lu-you-ji-chu-zhi-lian-lu-you-jing-tai-lu-you-yu-dong-tai-lu-you/</url>
+      
+        <content type="html"><![CDATA[<h2 id="路由的来源"><a href="#路由的来源" class="headerlink" title="路由的来源"></a>路由的来源</h2><table><thead><tr><th>路由来源</th><th>备注</th></tr></thead><tbody><tr><td>直连路由</td><td>路由器接口上的网络（接口配置了IP地址并且开启）</td></tr><tr><td>静态路由</td><td>管理员手工添加的网络</td></tr><tr><td>动态路由</td><td>路由器之间动态学习形成的网络</td></tr></tbody></table><h3 id="直连路由"><a href="#直连路由" class="headerlink" title="直连路由"></a>直连路由</h3><p><img src="https://img-blog.csdnimg.cn/51663a2667db48218e2726957eaa3f9b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_16,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><ul><li>上面这个路由的右边与下面的接口在<strong>配置IP地址</strong>后，并且在<strong>开启</strong>的状态下，形成了<strong>直连路由</strong></li></ul><p><img src="https://img-blog.csdnimg.cn/b379a782a1154415a7890251a9c03dea.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p><h3 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a><a href="https://so.csdn.net/so/search?q=%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1&spm=1001.2101.3001.7020">静态路由</a></h3><p><img src="https://img-blog.csdnimg.cn/b8aebdfce35f4199baba450981b8c854.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><ul><li>为了使目标地址为PC2的数据包转发到相应目的地，设置AR1的下一跳为10.1.1.2</li></ul><p><img src="https://img-blog.csdnimg.cn/bc8bd6efab9a4aec8c0a63179b1d6c3d.png#pic_center" alt="静态路由"></p><h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><p><img src="https://img-blog.csdnimg.cn/1b85ca47f58a49e88319c532c7cc96d4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><ul><li>设置两路由器的动态路由OSPF</li></ul><p><img src="https://img-blog.csdnimg.cn/3c5c12723d3f41ad8ba39ce7b6db7a50.png#pic_center" alt="ospf"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> 路由 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>路由基础-分析路由表以及关于路由选路的问题</title>
-      <link href="/2021/12/02/categories/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/"/>
-      <url>/2021/12/02/categories/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/</url>
+      <link href="/2021/12/02/categories/ensp/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/"/>
+      <url>/2021/12/02/categories/ensp/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/</url>
       
         <content type="html"><![CDATA[<h2 id="路由表解析"><a href="#路由表解析" class="headerlink" title="路由表解析"></a>路由表解析</h2><ul><li><blockquote><p>命令：display ip routing-table</p></blockquote></li></ul><p><img src="https://img-blog.csdnimg.cn/422fa1c843334c399a0c7b8551e606cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p><table><thead><tr><th>路由表字段</th><th>含义</th></tr></thead><tbody><tr><td>Destination</td><td>目标地址，用来标识IP包的<strong>目标地址或者目标网络</strong></td></tr><tr><td>Mask</td><td>网络前缀（或掩码），选择<strong>最佳路由</strong>的重要评断依据（最长匹配原则）</td></tr><tr><td>NextHop</td><td>下一跳地址，指明IP包所经由的<strong>下一个路由器的接口地址</strong></td></tr><tr><td>Interface</td><td>出接口，指明IP包将从该路由器的哪个接口转发出去</td></tr><tr><td>Protocol</td><td>协议，路由的来源，学习方式</td></tr><tr><td>Preference</td><td>优先级，比较<strong>不同路由来源</strong>到达相同目标网络的优先级，越低越优先</td></tr><tr><td>Cost</td><td>度量值，比较<strong>相同路由来源</strong>到达相同目标网络的不同路径的优先级，越低越优先</td></tr></tbody></table><h3 id="常用路由类型的默认优先级"><a href="#常用路由类型的默认优先级" class="headerlink" title="常用路由类型的默认优先级"></a>常用路由类型的默认<a href="https://so.csdn.net/so/search?q=%E4%BC%98%E5%85%88%E7%BA%A7&spm=1001.2101.3001.7020">优先级</a></h3><table><thead><tr><th>路由类型</th><th>优先级</th></tr></thead><tbody><tr><td>Direct</td><td>0</td></tr><tr><td>OSPF</td><td>10</td></tr><tr><td>Static</td><td>60</td></tr><tr><td>RIP</td><td>100</td></tr></tbody></table><h2 id="路由选路"><a href="#路由选路" class="headerlink" title="路由选路"></a>路由选路</h2><p><img src="https://img-blog.csdnimg.cn/88f33d2ac599472fa4aca505f0dc00d2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="网络拓扑"></p><ul><li>如果AR4要给AR7转发数据包，它会怎么选路呢？</li><li>假设路由协议选择不同（OSPF，RIP…）<ul><li>上述问题属于<strong>不同路由来源到达相同目标网络</strong>，所以比较优先级</li><li>所以路由器选择优先级较低的那条路进行转发数据包</li></ul></li><li>假设所有路由协议选择相同<ul><li>上述问题属于<strong>相同路由来源到达相同目标网络</strong>，所以比较Cost</li><li>根据Cost越小，越优先</li><li>所以路由器选择Cost较低的那条路进行转发数据包</li></ul></li></ul><h3 id="路由表的工作内容"><a href="#路由表的工作内容" class="headerlink" title="路由表的工作内容"></a>路由表的工作内容</h3><ul><li>收到数据包查看<strong>目标IP地址</strong></li><li>在路由表中选择<strong>最佳路径</strong></li><li><strong>维护</strong>路由表</li><li>注意：路由表所显示的信息已经是<strong>比较优先级</strong>之后的结果</li></ul>]]></content>
       
@@ -112,9 +220,154 @@
     
     
     <entry>
+      <title>路由基础-等价路由负载分担</title>
+      <link href="/2021/12/02/categories/ensp/lu-you-ji-chu-deng-jie-lu-you-fu-zai-fen-dan/"/>
+      <url>/2021/12/02/categories/ensp/lu-you-ji-chu-deng-jie-lu-you-fu-zai-fen-dan/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h2 id="等价路由（ECMP，Equal-Cost-Multi-Path）"><a href="#等价路由（ECMP，Equal-Cost-Multi-Path）" class="headerlink" title="等价路由（ECMP，Equal Cost Multi-Path）"></a>等价路由（ECMP，Equal Cost Multi-Path）</h2><ul><li>对于<strong>同一个路由来源</strong>，当达到同一个目标网络有<strong>几条相同度量值</strong>的路由时，<strong>这些路由都会被加入到路由表</strong>中，数据包会在这几个链路上进行<strong>负载分担</strong></li><li><strong>负载分担</strong>不是将<strong>数据包对半分</strong>，而是有一套算法机制控制</li></ul><p>  <img src="https://img-blog.csdnimg.cn/b4a6d2ed03af4f7e81b512a4f8e5b228.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p><h2 id="最长匹配原则"><a href="#最长匹配原则" class="headerlink" title="最长匹配原则"></a>最长匹配原则</h2><ul><li>最长前缀匹配原则：如果路由表查表转发分组时发现有多条路由可选择时，则选择网络前缀最长的那条进行转发</li></ul><h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>  <img src="https://img-blog.csdnimg.cn/0da7608e0f4a4a188c9b4839a0b85f28.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="路由表"></p><h4 id="路由表的匹配过程"><a href="#路由表的匹配过程" class="headerlink" title="路由表的匹配过程"></a>路由表的匹配过程</h4>  <pre class="line-numbers language-none"><code class="language-none">当有数据报文传来时，路由表会将报文的目的地址前n位与表中的路由前n位相与（n为路由中的掩码长度）。如果不一致则排除对应路由。如果一致，则选择匹配长度最长的路由进行转发例如：当有目的地址为 9.1.2.1 的报文传来时路由器会将 8.0.0.0&#x2F;8 的路由与 9.1.2.1的前八位相与00001000 00000000 00000000 00000000(8.0.0.0)00001001 00000001 00000010 00000001(9.1.2.1)很明显能够得出，两地址前八位相与不能得到原八位路由器将不能匹配的路由剔除后，会选择子网掩码最长的路由进行数据转发,这也就是最长匹配原则比如，将9.1.0.0&#x2F;16 9.0.0.0&#x2F;8 9.1.2.1进行相与00001001 00000001 00000010 00000001(9.1.2.1)00001001 00000000 00000000 00000000(9.0.0.0&#x2F;8)00001001 00000001 00000000 00000000(9.1.0.0&#x2F;16)很明显看出，9.0.0.0这条路由能匹配15位，9.1.0.0&#x2F;16这条路由能匹配22位，所以选择9.1.0.0&#x2F;16这条路由进行转发数据。因为在前n位匹配的情况下，子网掩码越长的，越优先选择。123456789101112131415<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> 路由 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>子网掩码以及网络地址、主机地址、广播地址</title>
+      <link href="/2021/11/28/categories/ensp/fen-lei-bian-zhi-de-ipv4-di-zhi-yi-ji-hua-fen-zi-wang-de-li-ti/"/>
+      <url>/2021/11/28/categories/ensp/fen-lei-bian-zhi-de-ipv4-di-zhi-yi-ji-hua-fen-zi-wang-de-li-ti/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="子网掩码-Subnet-Mask"><a href="#子网掩码-Subnet-Mask" class="headerlink" title="子网掩码(Subnet Mask)"></a>子网掩码(Subnet Mask)</h1><ul><li>用于区分网络位与主机位</li><li>1表示网络位，0表示主机位（连续的1和0）</li></ul><h2 id="默认子网掩码"><a href="#默认子网掩码" class="headerlink" title="默认子网掩码"></a>默认子网掩码</h2><p>  <img src="https://img-blog.csdnimg.cn/24e7efbaf68341b4bc44cc656a6b0766.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="默认子网掩码"></p><h1 id="网络地址、主机地址、广播地址"><a href="#网络地址、主机地址、广播地址" class="headerlink" title="网络地址、主机地址、广播地址"></a>网络地址、主机地址、<a href="https://so.csdn.net/so/search?q=%E5%B9%BF%E6%92%AD%E5%9C%B0%E5%9D%80&spm=1001.2101.3001.7020">广播地址</a></h1><table><thead><tr><th>名称</th><th>定义</th></tr></thead><tbody><tr><td>网络地址</td><td>主机位<strong>全为0</strong> 代表一个网段（头）</td></tr><tr><td>主机地址</td><td>主机位<strong>不全为0也不全为1</strong> 代表一个网段的一个节点（身体）</td></tr><tr><td>广播地址</td><td>主机位<strong>全为1</strong> 代表一个网段内的所有节点（尾）</td></tr></tbody></table><p>  <img src="https://img-blog.csdnimg.cn/0e3376889964410db16218ce59ee8bfd.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="各部分对应位置"></p><h2 id="各类IP地址可分配的网路地址与IP地址"><a href="#各类IP地址可分配的网路地址与IP地址" class="headerlink" title="各类IP地址可分配的网路地址与IP地址"></a>各类IP地址可分配的网路地址与IP地址</h2><table><thead><tr><th>类别</th><th>可分配网络数量</th><th>可分配IP地址数量</th></tr></thead><tbody><tr><td>A类</td><td>2^(8-1) - 2 &#x3D; 126 (减2的原因是除去最小网络号0 与最大网络号127)</td><td>2^24 - 2 （除去网络地址 与广播地址）</td></tr><tr><td>B类</td><td>2^(16-2) &#x3D; 16384</td><td>2^16 - 2 &#x3D; 65534</td></tr><tr><td>C类</td><td>2^(24-3) &#x3D; 2097152</td><td>2^8 - 2 &#x3D; 254</td></tr></tbody></table></li></ul><p>​<br>    资料参考：<a href="https://www.bilibili.com/video/BV1Dg4y187bZ">https://www.bilibili.com/video/BV1Dg4y187bZ</a> <a href="https://www.bilibili.com/video/BV1c4411d7jb">https://www.bilibili.com/video/BV1c4411d7jb</a></p><ul><li><p>&#96;&#96;&#96;</p>  <pre class="line-numbers language-none"><code class="language-none">- &#96;&#96;&#96;    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> IP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类编址的IPv4地址以及划分子网的例题</title>
+      <link href="/2021/11/28/categories/ensp/zi-wang-yan-ma-yi-ji-wang-luo-di-zhi-zhu-ji-di-zhi-guang-bo-di-zhi/"/>
+      <url>/2021/11/28/categories/ensp/zi-wang-yan-ma-yi-ji-wang-luo-di-zhi-zhu-ji-di-zhi-guang-bo-di-zhi/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><h2 id="分类编址的IPv4地址"><a href="#分类编址的IPv4地址" class="headerlink" title="分类编址的IPv4地址"></a>分类编址的IPv4地址</h2><p>  <img src="https://img-blog.csdnimg.cn/de0ef8a32919414b8ef37168bfd13d07.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="分类ip"></p><h2 id="划分子网"><a href="#划分子网" class="headerlink" title="划分子网"></a>划分<a href="https://so.csdn.net/so/search?q=%E5%AD%90%E7%BD%91&spm=1001.2101.3001.7020">子网</a></h2><p>  <img src="https://img-blog.csdnimg.cn/22bab5a13a234b98a744ace4718a5920.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="划分子网"></p><p>  <img src="https://img-blog.csdnimg.cn/228b1a5431a145d19a02b559a9cc25b6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="划分子网"><br>  资料参考：<a href="https://www.bilibili.com/video/BV1Dg4y187bZ">https://www.bilibili.com/video/BV1Dg4y187bZ</a><br>  <a href="https://www.bilibili.com/video/BV1c4411d7jb">https://www.bilibili.com/video/BV1c4411d7jb</a></p>  <pre class="line-numbers language-none"><code class="language-none">    <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> IP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IP地址的组成</title>
+      <link href="/2021/11/28/categories/ensp/ip-di-zhi-de-zu-cheng/"/>
+      <url>/2021/11/28/categories/ensp/ip-di-zhi-de-zu-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h1><ul><li>在IP网络通信中，通信节点需要有<strong>IP地址</strong>才能相互通信</li></ul><h2 id="IP的组成"><a href="#IP的组成" class="headerlink" title="IP的组成"></a>IP的组成</h2><ul><li>以<strong>点分十进制</strong>表示，由<strong>32位二进制</strong>组成<br>  <img src="https://img-blog.csdnimg.cn/79126ffdb1994b42964f4b6e1d3b00b2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="IP"></li><li>分为<strong>网络位</strong>和<strong>主机位</strong>两部分<ul><li>网络位，代表IP地址所属的网段</li><li>主机位，代表网段上的某个节点</li><li>由子网掩码决定分界点<br>  <img src="https://img-blog.csdnimg.cn/a85f2bcc46d84ec78f5f05a21235c47a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="IP header"></li></ul></li></ul><h2 id="熟记常用二进制与十进制的转化"><a href="#熟记常用二进制与十进制的转化" class="headerlink" title="熟记常用二进制与十进制的转化"></a>熟记常用<a href="https://so.csdn.net/so/search?q=%E4%BA%8C%E8%BF%9B%E5%88%B6&spm=1001.2101.3001.7020">二进制</a>与十进制的转化</h2><p><img src="https://img-blog.csdnimg.cn/4b75efa038d243678d91489e42edcc5a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="二进制与十进制"></p><p>资料参考：<a href="https://www.bilibili.com/video/BV1Dg4y187bZ">https://www.bilibili.com/video/BV1Dg4y187bZ</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> IP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>路由基础-路由聚合(汇总)以及最长匹配原则</title>
+      <link href="/2021/11/28/categories/ensp/lu-you-ji-chu-lu-you-ju-he-hui-zong-yi-ji-zui-chang-pi-pei-yuan-ze/"/>
+      <url>/2021/11/28/categories/ensp/lu-you-ji-chu-lu-you-ju-he-hui-zong-yi-ji-zui-chang-pi-pei-yuan-ze/</url>
+      
+        <content type="html"><![CDATA[<h1 id="路由聚合-构造超网"><a href="#路由聚合-构造超网" class="headerlink" title="路由聚合(构造超网)"></a>路由聚合(构造超网)</h1><ul><li>如果有多个网段连接在一个路由器上，可以通过路由聚合将五条路由信息聚合成一个路由信息</li><li>几个网段中<strong>共同的网络前缀</strong>组成<strong>聚合地址块</strong>，聚合地址块是路由聚合之后存储的路由信息</li></ul><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><img src="https://img-blog.csdnimg.cn/46a3b4a0171343eaa740044b90ea5410.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><h2 id="最长前缀匹配原则"><a href="#最长前缀匹配原则" class="headerlink" title="最长前缀匹配原则"></a>最长前缀匹配原则</h2><blockquote><p>最长前缀匹配原则：如果路由表查表转发分组时发现有多条路由可选择时，则选择网络前缀最长的那条进行转发</p><p>原因：这样的路由更加具体</p></blockquote><ul><li>相关证明见 <a href="https://blog.csdn.net/Mikevane/article/details/121668709">路由基础-等价路由负载分担以及最长匹配原则的解析</a>      资料参考：<a href="https://www.bilibili.com/video/BV1c4411d7jb">https://www.bilibili.com/video/BV1c4411d7jb</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ensp </category>
+          
+          <category> 网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ensp </tag>
+            
+            <tag> 路由 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>eNSP常用命令</title>
-      <link href="/2021/11/16/categories/ensp-chang-yong-ming-ling/"/>
-      <url>/2021/11/16/categories/ensp-chang-yong-ming-ling/</url>
+      <link href="/2021/11/16/categories/ensp/ensp-chang-yong-ming-ling/"/>
+      <url>/2021/11/16/categories/ensp/ensp-chang-yong-ming-ling/</url>
       
         <content type="html"><![CDATA[<h2 id="各种视窗"><a href="#各种视窗" class="headerlink" title="各种视窗"></a>各种视窗</h2><h3 id="用户视窗"><a href="#用户视窗" class="headerlink" title="用户视窗"></a>用户视窗</h3><ul><li>刚进入交换机时的界面</li></ul><blockquote><p>交换机名字外面为“&lt; &gt;”</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/e41ddc4ebd04925cd0488fbfe159db3e.png" alt="img"></p><h3 id="系统视窗"><a href="#系统视窗" class="headerlink" title="系统视窗"></a>系统视窗</h3><blockquote><p>交换机名字外面为“[ ]”<br>命令：system-view</p></blockquote><p><img src="https://img-blog.csdnimg.cn/5d972b045dee4e28bc2989e50ab087ed.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><h3 id="接口视窗"><a href="#接口视窗" class="headerlink" title="接口视窗"></a>接口视窗</h3><blockquote><p>交换机+接口名称<br>命令：interface+接口</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/97ef4ab921b2c6df895781c694660828.png" alt="img"></p><h3 id="Loopback-接口视图"><a href="#Loopback-接口视图" class="headerlink" title="Loopback 接口视图"></a>Loopback 接口视图</h3><blockquote><p>设备名-Loopback</p></blockquote><p><img src="https://img-blog.csdnimg.cn/f72a469c6cb1405fa2a85e942e0b7454.png#pic_center" alt="在这里插入图片描述"></p><h3 id="用户界面视图"><a href="#用户界面视图" class="headerlink" title="用户界面视图"></a>用户界面视图</h3><p><img src="https://img-blog.csdnimg.cn/22a2caebc1ec42f98b39407cb2d73b2e.png#pic_center" alt="在这里插入图片描述"></p><h3 id="RIP-协议视图"><a href="#RIP-协议视图" class="headerlink" title="RIP 协议视图"></a>RIP 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/d5d8a7c1f116453a96e7755a477035e5.png#pic_center" alt="在这里插入图片描述"></p><h3 id="OSPF-协议视图"><a href="#OSPF-协议视图" class="headerlink" title="OSPF 协议视图"></a>OSPF 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/3ddde2bd81bd475483871b99ae70a806.png#pic_center" alt="在这里插入图片描述"></p>]]></content>
       
@@ -138,8 +391,8 @@
     
     <entry>
       <title>eNSP常见视窗</title>
-      <link href="/2021/11/16/categories/ensp-chang-jian-shi-chuang/"/>
-      <url>/2021/11/16/categories/ensp-chang-jian-shi-chuang/</url>
+      <link href="/2021/11/16/categories/ensp/ensp-chang-jian-shi-chuang/"/>
+      <url>/2021/11/16/categories/ensp/ensp-chang-jian-shi-chuang/</url>
       
         <content type="html"><![CDATA[<h2 id="各种视窗"><a href="#各种视窗" class="headerlink" title="各种视窗"></a>各种视窗</h2><h3 id="用户视窗"><a href="#用户视窗" class="headerlink" title="用户视窗"></a>用户视窗</h3><ul><li>刚进入交换机时的界面</li></ul><blockquote><p>交换机名字外面为“&lt; &gt;”</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/e41ddc4ebd04925cd0488fbfe159db3e.png" alt="用户视窗"></p><h3 id="系统视窗"><a href="#系统视窗" class="headerlink" title="系统视窗"></a>系统视窗</h3><blockquote><p>交换机名字外面为“[ ]”<br>命令：system-view</p></blockquote><p><img src="https://img-blog.csdnimg.cn/5d972b045dee4e28bc2989e50ab087ed.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBATWlrZXZhbmU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="系统视窗"></p><h3 id="接口视窗"><a href="#接口视窗" class="headerlink" title="接口视窗"></a>接口视窗</h3><blockquote><p>交换机+接口名称<br>命令：interface+接口</p></blockquote><p><img src="https://img-blog.csdnimg.cn/img_convert/97ef4ab921b2c6df895781c694660828.png" alt="接口视窗"></p><h3 id="Loopback-接口视图"><a href="#Loopback-接口视图" class="headerlink" title="Loopback 接口视图"></a>Loopback 接口视图</h3><blockquote><p>设备名-Loopback</p></blockquote><p><img src="https://img-blog.csdnimg.cn/f72a469c6cb1405fa2a85e942e0b7454.png#pic_center" alt="接口视图"></p><h3 id="用户界面视图"><a href="#用户界面视图" class="headerlink" title="用户界面视图"></a>用户界面视图</h3><p><img src="https://img-blog.csdnimg.cn/22a2caebc1ec42f98b39407cb2d73b2e.png#pic_center" alt="用户界面视图"></p><h3 id="RIP-协议视图"><a href="#RIP-协议视图" class="headerlink" title="RIP 协议视图"></a>RIP 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/d5d8a7c1f116453a96e7755a477035e5.png#pic_center" alt="RIP视图"></p><h3 id="OSPF-协议视图"><a href="#OSPF-协议视图" class="headerlink" title="OSPF 协议视图"></a>OSPF 协议视图</h3><p><img src="https://img-blog.csdnimg.cn/3ddde2bd81bd475483871b99ae70a806.png#pic_center" alt="OSPF视图"></p>]]></content>
       
@@ -167,8 +420,8 @@
     
     <entry>
       <title>交换机三种端口模式的特点</title>
-      <link href="/2021/11/16/categories/jiao-huan-ji-san-chong-duan-kou-mo-shi-de-te-dian/"/>
-      <url>/2021/11/16/categories/jiao-huan-ji-san-chong-duan-kou-mo-shi-de-te-dian/</url>
+      <link href="/2021/11/16/categories/ensp/jiao-huan-ji-san-chong-duan-kou-mo-shi-de-te-dian/"/>
+      <url>/2021/11/16/categories/ensp/jiao-huan-ji-san-chong-duan-kou-mo-shi-de-te-dian/</url>
       
         <content type="html"><![CDATA[<h2 id="交换机三种端口模式的特点"><a href="#交换机三种端口模式的特点" class="headerlink" title="交换机三种端口模式的特点"></a>交换机三种端口模式的特点</h2><table><thead><tr><th>接口</th><th>属于多端口</th><th>(通常)连接设备</th><th>PVID</th><th>接受</th><th>发送</th></tr></thead><tbody><tr><td>Access</td><td>❌</td><td>计算机</td><td>PVID &#x3D; VLAN ID</td><td>一般接受<strong>untagged</strong>数据帧，部分产品接受<strong>tagged</strong>数据帧 • 当接收<strong>untagged</strong>数据帧时，根据端口<strong>PVID</strong>值为数据帧加上tag和缺省优先级，再进 行交换转发； • 当收到<strong>tagged</strong>数据帧时，不同厂家设备可能处理不一样的！（忽略此特殊情况）</td><td><strong>去除标签并进行转发:</strong> • 对于数据帧中的<strong>VID</strong>与端口<strong>PVID</strong>一致的，去除标签并进行转发！ • 对于数据帧中的VID与端口PVID不一致的，不进行转发！</td></tr><tr><td>Trunk</td><td>✔</td><td>交换机之间或交换机与路由器</td><td>默认为1</td><td>• 能够接收<strong>VID&#x3D;PVID</strong>和<strong>VID≠PVID</strong>的<strong>tagged frame</strong>，不改变Tag； • 对于<strong>untagged frame</strong>则加上端口的<strong>PVID</strong>和<strong>default priority</strong>再进行交换转发；</td><td>• 对于VID&#x3D;PVID的<strong>Tag</strong>包则去掉<strong>VID Tag</strong>再进行转发。 • 对于<strong>VID ≠ PVID</strong>的<strong>Tag</strong>包则转发不修改<strong>Tag</strong>。 • 对于<strong>Untagged</strong>包则无此情况。</td></tr><tr><td>Hybrid</td><td>✔</td><td>Access + Trunk</td><td>默认为1</td><td>• 能够接收<strong>VID&#x3D;PVID</strong>和<strong>VID≠PVID</strong>的<strong>tagged frame</strong>，不改变TAG； • 对于<strong>untagged frame</strong>则加上端口的<strong>PVID</strong>和<strong>default priority</strong>再进行交换转发；</td><td>• 判断该VLAN在本端口的属性（即查看到该端口对哪些VLAN是<strong>untagged</strong>， 哪些 VLAN是 <strong>tag</strong>）。 • 如果要求输出为<strong>untagged</strong>包则在输出端口剥离VLAN信息，再发送；如果是要求输出 <strong>tag</strong>，则直接发送。</td></tr></tbody></table>]]></content>
       

@@ -4,15 +4,25 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java学习, MikeVane">
-    <meta name="description" content="Java学习测试
-  public static void main(String[] args)&amp;#123;
-      System.out.println(&amp;quot;hello world&amp;quot;)
-  &amp;#125;
+    <meta name="keywords" content="【计算机网络】电路交换与分组交换的区别, MikeVane">
+    <meta name="description" content="
+电路交换与分组交换的区别
 
 
 
-">
+电路交换
+分组交换
+
+
+
+数据传输过程
+i) 连接建立。 ii) 数据传输。 iii) 连接释放
+直接发生数据传输
+
+
+地址
+在电路交换中，每个数据单元都知道由源提供的整个路径地址
+每个数据单元只知道最终目">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +36,7 @@
 
     
 
-    <title>Java学习 | MikeVane</title>
+    <title>【计算机网络】电路交换与分组交换的区别 | MikeVane</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -294,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java学习</h1>
+                    <h1 class="description center-align post-title">【计算机网络】电路交换与分组交换的区别</h1>
                 </div>
             </div>
         </div>
@@ -415,12 +425,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">基础</span>
-                            </a>
-                        
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">网络</span>
                             </a>
                         
                     </div>
@@ -431,8 +437,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/%E7%BD%91%E7%BB%9C/" class="post-category">
+                                网络
                             </a>
                         
                     </div>
@@ -444,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-30
+                    2022-01-17
                 </div>
                 
 
@@ -468,11 +474,86 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
-<li><pre><code class="line-numbers language-java">  public static void main(String[] args)&#123;
-      System.out.println(&quot;hello world&quot;)
-  &#125;
-</code></pre>
+                <ul>
+<li><h3 id="电路交换与分组交换的区别"><a href="#电路交换与分组交换的区别" class="headerlink" title="电路交换与分组交换的区别"></a>电路交换与分组交换的区别</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>电路交换</th>
+<th>分组交换</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据传输过程</td>
+<td>i) 连接建立。 ii) 数据传输。 iii) 连接释放</td>
+<td>直接发生数据传输</td>
+</tr>
+<tr>
+<td>地址</td>
+<td>在电路交换中，每个数据单元都知道由源提供的<strong>整个</strong>路径地址</td>
+<td>每个数据单元只知道最终目的地址<strong>中间</strong>路径，并且这个路径是由路由器决定的</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>数据仅在源系统处理</td>
+<td>数据在包括源系统在内的所有中间节点上进行处理</td>
+</tr>
+<tr>
+<td>延迟</td>
+<td>数据单元之间的延迟一致</td>
+<td>数据单元之间的延迟不均匀</td>
+</tr>
+<tr>
+<td>资源预留</td>
+<td>资源预留，因为数据传输的路径是固定的</td>
+<td>没有资源预留，因为带宽在用户之间共享</td>
+</tr>
+<tr>
+<td>可靠性</td>
+<td>更可靠</td>
+<td>不太可靠</td>
+</tr>
+<tr>
+<td>浪费程度</td>
+<td>资源浪费较多</td>
+<td>资源浪费更少</td>
+</tr>
+<tr>
+<td>存储转发</td>
+<td>没有存储和转发技术</td>
+<td>存在存储和转发技术</td>
+</tr>
+<tr>
+<td>数据传输是否由单一对象传出</td>
+<td>数据的传输由源完成</td>
+<td>数据的传输不仅由源完成，还由中间路由器完成</td>
+</tr>
+<tr>
+<td>拥塞对应的阶段</td>
+<td>在连接建立阶段可能会发生拥塞，因为可能存在对通道发出请求但通道已被占用的情况</td>
+<td>数据传输阶段可能会发生拥塞，大量数据包很快就会到来</td>
+</tr>
+<tr>
+<td>双向性</td>
+<td>不便于处理双边流量</td>
+<td>适用于处理双边流量</td>
+</tr>
+<tr>
+<td>成本计算</td>
+<td>费用取决于时间和距离，而不取决于网络中的流量</td>
+<td>费用基于字节数和连接时间</td>
+</tr>
+<tr>
+<td>分组记录</td>
+<td>永远不可能记录分组</td>
+<td>可以记录分组</td>
+</tr>
+<tr>
+<td>物理连接</td>
+<td>源和目标之间有一条物理路径</td>
+<td>源和目标之间没有物理路径</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 
@@ -501,7 +582,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://mikevane-whb.github.io/2022/06/30/java/java-xue-xi/">https://mikevane-whb.github.io/2022/06/30/java/java-xue-xi/</a>
+                    <a href="https://mikevane-whb.github.io/2022/01/17/categories/wang-luo/ji-suan-ji-wang-luo-dian-lu-jiao-huan-yu-fen-zu-jiao-huan-de-qu-bie/">https://mikevane-whb.github.io/2022/01/17/categories/wang-luo/ji-suan-ji-wang-luo-dian-lu-jiao-huan-yu-fen-zu-jiao-huan-de-qu-bie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,12 +620,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">基础</span>
-                                </a>
-                            
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">网络</span>
                                 </a>
                             
                         </div>
@@ -596,13 +673,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/06/30/java/wang-luo/">
+                <a href="/2022/02/09/categories/wang-luo/ji-suan-ji-wang-luo-url-de-ji-ben-ge-shi-yi-ji-chang-yong-url/">
                     <div class="card-image">
                         
                         
-                        <img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/featureimages/21.jpg" class="responsive-img" alt="网络学习">
+                        <img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/featureimages/6.jpg" class="responsive-img" alt="【计算机网络】URL的基本格式以及常用URL">
                         
-                        <span class="card-title">网络学习</span>
+                        <span class="card-title">【计算机网络】URL的基本格式以及常用URL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -613,7 +690,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-30
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
                         </span>
                         <span class="publish-author">
                             
@@ -634,10 +711,6 @@
                         <span class="chip bg-color">网络</span>
                     </a>
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -649,13 +722,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/02/categories/lu-you-ji-chu-fen-xi-lu-you-biao-yi-ji-guan-yu-lu-you-xuan-lu-de-wen-ti/">
+                <a href="/2021/12/02/categories/ensp/ensp-gou-jian-jing-tai-lu-you-shi-yan/">
                     <div class="card-image">
                         
                         
-                        <img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/featureimages/1.jpg" class="responsive-img" alt="路由基础-分析路由表以及关于路由选路的问题">
+                        <img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/featureimages/13.jpg" class="responsive-img" alt="eNSP-构建静态路由实验">
                         
-                        <span class="card-title">路由基础-分析路由表以及关于路由选路的问题</span>
+                        <span class="card-title">eNSP-构建静态路由实验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
