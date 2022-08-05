@@ -467,7 +467,7 @@ MyBatis 本是Apache的一个">
 
         
         <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.28.0/themes/prism.min.css">
+        <link rel="stylesheet" href="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/libs/prism/prism.css">
         
 
         
@@ -2756,6 +2756,84 @@ List&lt;Emp&gt; selectByDeptnoAndSal(@Param(&quot;deptno&quot;) int deptno, @Par
 <td>1.简化配置  <br>2.使用起来直观且容易，提升开发效率  <br/>3.类型安全，编译器进行校验，不用等到运行期才会发现错误。  <br/>4.注解的解析可以不依赖于第三方库，可以直接使用Java自带的反射</td>
 </tr>
 </tbody></table>
+<hr>
+<h2 id="10-缓存"><a href="#10-缓存" class="headerlink" title="10 缓存"></a>10 缓存</h2><ul>
+<li><code>概念</code>：缓存是一种临时存储少量数据至内存或者是磁盘的一种技术.，它可以减少数据的加载次数,降低工作量,提高程序响应速度<ul>
+<li>MyBatis允许使用缓存，缓存一般放置在高速读&#x2F;写的存储器上，比如服务器的内存，能够有效的提供系统性能</li>
+<li>MyBatis分为 <code>一级缓存和二级缓存</code>，同时也可配置关于缓存设置</li>
+</ul>
+</li>
+<li><code>一级缓存与二级缓存</code>：<ul>
+<li>一级存储是SqlSession上的缓存</li>
+<li>二级缓存是在SqlSessionFactory(namespace)上的缓存</li>
+<li>默认情况下，MyBatis开启一级缓存，没有开启二级缓存。当数据量大的时候可以借助一些第三方缓存框架或Redis缓存来协助保存Mybatis的二级缓存数据</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/ssm/MyBatis/image-20220805164147205.png" alt="概念图"></p>
+<hr>
+<h3 id="10-1-一级缓存"><a href="#10-1-一级缓存" class="headerlink" title="10.1 一级缓存"></a>10.1 一级缓存</h3><ul>
+<li>一级存储是SqlSession上的缓存，默认开启，是一种内存型缓存,不要求实体类对象实现Serializable接口<ul>
+<li><code>缓存中的数据使用键值对形式存储数据namespace+sqlid+args+offset&gt;&gt;&gt; hash值作为键, 查询出的结果作为值</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/ssm/MyBatis/image-20220805164314138.png" alt="一级缓存原理图"></p>
+<ul>
+<li><code>注意</code>：当 <code>中间发生了增删改</code>或者<code>SqlSession</code> 调用了 <code>commit</code> ,会 <code>自动清空缓存</code></li>
+</ul>
+<hr>
+<h4 id="10-1-1-证明一级缓存是SqlSession上的缓存"><a href="#10-1-1-证明一级缓存是SqlSession上的缓存" class="headerlink" title="10.1.1 证明一级缓存是SqlSession上的缓存"></a>10.1.1 证明一级缓存是SqlSession上的缓存</h4><ul>
+<li>首先，设置一个简单的查询：根据员工编号查询员工信息</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">"select * from emp where empno = #&#123;empno&#125;"</span><span class="token punctuation">)</span>
+<span class="token class-name">Emp</span> <span class="token function">selectByEmpno</span><span class="token punctuation">(</span><span class="token keyword">int</span> empno<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>通过 <code>mapper</code> 执行两次查询操作，并判断两次查询得到的对象是否为同一对象</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">selectByEmpnoTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token class-name">EmpMapper</span> mapper <span class="token operator">=</span> sqlSession<span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">EmpMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Emp</span> emp1 <span class="token operator">=</span> mapper<span class="token punctuation">.</span><span class="token function">selectByEmpno</span><span class="token punctuation">(</span><span class="token number">7934</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Emp</span> emp2 <span class="token operator">=</span> mapper<span class="token punctuation">.</span><span class="token function">selectByEmpno</span><span class="token punctuation">(</span><span class="token number">7934</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>emp1 <span class="token operator">==</span> emp2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>输出结果为：<code>true</code>，说明两次查询到的对象为同一对象，但两次查询的操作都是<code>同一个 mapper</code> 调用，所以还需要证明不同 mapper 查询到的对象仍为同一对象</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">selectByEmpnoTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token class-name">EmpMapper</span> mapper1 <span class="token operator">=</span> sqlSession<span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">EmpMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">EmpMapper</span> mapper2 <span class="token operator">=</span> sqlSession<span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">EmpMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Emp</span> emp1 <span class="token operator">=</span> mapper1<span class="token punctuation">.</span><span class="token function">selectByEmpno</span><span class="token punctuation">(</span><span class="token number">7934</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Emp</span> emp2 <span class="token operator">=</span> mapper1<span class="token punctuation">.</span><span class="token function">selectByEmpno</span><span class="token punctuation">(</span><span class="token number">7934</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>mapper1 <span class="token operator">==</span> mapper2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>emp1 <span class="token operator">==</span> emp2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>输出结果为：<code>false true</code>，证明了<code>不同 mapper 调用同一查询方法，获取到的对象是同一对象</code></li>
+<li>现在只是证明了 <code>mapper</code> 与查询到的结果无关，不能说明一级缓存是SqlSession上的缓存，所以对 <code>SqlSession</code> 进行证明</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">selectByEmpnoTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token class-name">SqlSession</span> sqlSession1 <span class="token operator">=</span> sqlSessionFactory<span class="token punctuation">.</span><span class="token function">openSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">EmpMapper</span> mapper1 <span class="token operator">=</span> sqlSession1<span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">EmpMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Emp</span> emp1 <span class="token operator">=</span> mapper1<span class="token punctuation">.</span><span class="token function">selectByEmpno</span><span class="token punctuation">(</span><span class="token number">7934</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">SqlSession</span> sqlSession2 <span class="token operator">=</span> sqlSessionFactory<span class="token punctuation">.</span><span class="token function">openSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">EmpMapper</span> mapper2 <span class="token operator">=</span> sqlSession2<span class="token punctuation">.</span><span class="token function">getMapper</span><span class="token punctuation">(</span><span class="token class-name">EmpMapper</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Emp</span> emp2 <span class="token operator">=</span> mapper2<span class="token punctuation">.</span><span class="token function">selectByEmpno</span><span class="token punctuation">(</span><span class="token number">7934</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>mapper1 <span class="token operator">==</span> mapper2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>emp1 <span class="token operator">==</span> emp2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>输出结果为：<code>false false</code>，说明分别获取了 <code>SqlSession</code> 后再进行同样的操作后，获取到的 <code>emp对象是不同的</code>，这证明了 <code>一级缓存是SqlSession上的缓存</code></li>
+</ul>
 
                 
             </div>
@@ -2991,7 +3069,7 @@ List&lt;Emp&gt; selectByDeptnoAndSal(@Param(&quot;deptno&quot;) int deptno, @Par
 
 
   <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script type="text/javascript" src="https://mikevane.oss-cn-chengdu.aliyuncs.com/img/blog/libs/prism/prism.js"></script>
 
 
 <!-- 代码语言 -->
